@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First VR</title>
+
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene>
+        <a-camera position="0 0.05 0.5">
+            <a-cursor cursor="fuse: true" raycaster="objects: .clickable" position="0 0 -0.1" geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.06" material="color: #cccccc; shader:flat">
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="" to="1 1 1" dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+            </a-cursor>
+        </a-camera>
+
+        <a-assets>
+            <a-asset-item id="boxModel" src="models/box.dae">
+            </a-asset-item>
+            <a-asset-item id="sphereModel" src="models/sphere.dae"></a-asset-item>
+        </a-assets>
+
+        <a-collada-model id="mySphere" src="#sphereModel" scale="0.1 0.1 0.1" position="0.5 -0.05 -1">
+            <a-animation begin="move" easing="ease-in" attribute="position" from="" to="0.5 -0.05 -5" fill="forwards" dur="200"></a-animation>
+        </a-collada-model>
+
+        <a-collada-model class="clickable" id="modelBox" src="#boxModel" position="-0.25 -0.05 -1" scale="0.1 0.1 0.1"></a-collada-model>
+
+
+        <a-plane rotation="-90 0 0" color="green" position="0 -0.05 -1" width="4" height="4"></a-plane>
+
+    </a-scene>
+
+    <script>
+        var myModelBox = document.querySelector("#modelBox")
+        var mySphere = document.querySelector("#mySphere");
+
+        myModelBox.addEventListener("click", function() {
+            mySphere.emit('move');
+        });
+    </script>
+
+</body>
+
+</html>

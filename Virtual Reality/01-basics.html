@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First VR</title>
+
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+    <a-scene>
+
+
+        <!---CURSOR + CAMERA--->
+
+        <a-camera position="0 2 3">
+            <a-cursor position="0 0 -0.1"></a-cursor>
+        </a-camera>
+
+        <!--            BASICS-->
+        <a-box position="-1 2 -2" color="red"></a-box>
+
+        <a-cylinder position="1 2 -3" radius="0.5" color="yellow"></a-cylinder>
+
+        <a-sphere position="0 2 -1" rotation="-90" color="purple" radius="0.25"></a-sphere>
+
+        <a-plane position="0 1.5 -2" rotation="-90 0 0" color="green" width="4" height="4"></a-plane>
+
+        <a-sky color="blue"></a-sky>
+
+
+
+
+
+
+    </a-scene>
+
+</body>
+
+</html>
