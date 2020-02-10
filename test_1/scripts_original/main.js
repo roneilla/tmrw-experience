@@ -38,3 +38,12 @@
  function assetsReady() {
    //  imageTest.ready();
  }
+
+function visibilityCheck() {
+     if (marker1.root.visible === true) {
+         setTimeout(function(){
+             window.location.href = "http://www.w3schools.com";
+         },2000);
+     }
+
+ }

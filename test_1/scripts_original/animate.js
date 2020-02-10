@@ -9,6 +9,8 @@ function animate(nowMsec) {
     });
 
     assetsReady();
+    
+    visibilityCheck();
 
     if (pc >= 2) {
         video.pause();
