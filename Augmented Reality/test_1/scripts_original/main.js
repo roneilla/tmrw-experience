@@ -36,7 +36,8 @@
  }
 
  function assetsReady() {
-   //  imageTest.ready();
+     // only needed for videos
+   //  imageTest.ready(); 
  }
 
 function visibilityCheck() {
