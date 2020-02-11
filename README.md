@@ -1,4 +1,4 @@
-# AR-Experiments
+# Interactive Narrative
 
 Boilerplate created by Roneilla
 
