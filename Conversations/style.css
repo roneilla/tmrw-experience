@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 375px;
+    background-color: #fafafa;
+    margin: 0 auto;
+}
+
+.headline {
+    height: 50px;
+    padding: 20px 10px 10px 10px;
+    background-color: #eee;
+}
+
+.back-button {
+    width: 25%;
+    float: left;
+}
+
+.contact-info {
+    width: 75%;
+    text-align: center;
+    float: left;
+}
+
+.conversation-wrapper {
+        padding: 0 5px;
+}
+
+.jordan {
+    background-color: #eaeaea;
+    margin-right: 20%;
+    color: #333;
+}
+
+.nicole {
+    background-color: #948df0;
+    margin-left: 20%;
+    color: white;
+
+}
+
+
+.text-block {
+    display: block;
+    padding: 10px;
+    max-width: 80%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    font-size: 15px;
+    line-height: 20px;
+}
