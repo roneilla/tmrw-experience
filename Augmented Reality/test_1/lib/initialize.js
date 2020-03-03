@@ -18,10 +18,10 @@ function initialize() {
         sourceType: 'webcam',
     });
     arToolkitSource.init(function onReady() {
-        arToolkitSource.onResize(renderer.domElement)
+        arToolkitSource.onResize(renderer.domElement);
     });
     window.addEventListener('resize', function () {
-        arToolkitSource.onResize(renderer.domElement)
+        arToolkitSource.onResize(renderer.domElement);
     });
     arToolkitContext = new THREEx.ArToolkitContext({
         cameraParametersUrl: 'data/camera_para.dat',

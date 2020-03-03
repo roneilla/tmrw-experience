@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNpQ8RSg71CG4wajZU-yo658aVL4NYnz4" async defer></script>
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #ff4e00;
+            box-sizing: content-box;
+        }
+
+        #map {
+            height: 100%;
+            display: none;
+        }
+
+        .container {
+            width: 50%;
+            height: 50%;
+            margin: 25%;
+            /*            background-color: blue;*/
+            color: #fff;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        #access {
+            background-color: black;
+            padding: 25px;
+            font-size: 3rem;
+            margin: 20px;
+            color: #ff4e00;
+            font-weight: 700;
+        }
+        
+        #access-text {
+            font-size: 1.5rem;
+            color: #f4f4f4;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <div class="container">
+        <div id="access">WELCOME.</div>
+        <div id="access-text">
+            Loading...
+        </div>
+    </div>
+
+    <script>
+        const fenceLat = 43.469600;
+        const fenceLong = -79.699000;
+        const range = 0.0005;
+
+        const n = fenceLat + range;
+        const s = fenceLat - range;
+        const e = fenceLong - range;
+        const w = fenceLong + range;
+
+        console.log(s, n);
+        console.log(w, e);
+
+        function onSuccess(position) {
+            initMap(position.coords.latitude, position.coords.longitude);
+        }
+
+        function onError(error) {
+            alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+        }
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+        var map;
+
+        function initMap(LAT, LONG) {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: LAT,
+                    lng: LONG
+                },
+                zoom: 15
+
+            });
+
+            console.log("current");
+            console.log(LAT, LONG);
+
+            if ((LAT >= s) && (LAT <= n) && (LONG >= e) && (LONG <= w)) {
+                document.getElementById("access").innerHTML = "ACCESS GRANTED";
+                document.getElementById("access-text").innerHTML = "Find your pass in J319.";
+            } else {
+                document.getElementById("access").innerHTML = "ACCESS DENIED";
+                document.getElementById("access-text").innerHTML = "This site cannot be accessed from your location.";
+            }
+        }
+    </script>
+
+
+</body></html>

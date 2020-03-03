@@ -85,54 +85,54 @@ class MarkerVideo {
 
 
 }
-
-var biomeLoader = new THREE.ColladaLoader();
-biomeLoader.options.convertUpAxis = true;
-biomeLoader.load('models/biome.dae', function (collada) {
-    dae = collada.scene;
-    dae.scale.x = dae.scale.y = dae.scale.z = 0.25;
-    dae.rotation.x = 135 * Math.PI / 180;
-    dae.position.y = 2;
-    dae.updateMatrix();
-    markerAA.root.add(dae);
-});
-
-class MarkerModel {
-    constructor() {
-        this.loader = new THREE.ColladaLoader();
-    }
-
-    load(src) {
-        this.loader.load(src, function (collada) {
-            this.dae = collada.scene;
-            this.setScale(1, 1, 1);
-            this.setPosition(1, 1, 1);
-            this.setRotation(1, 1, 1);
-            this.updateMatrix();
-        })
-    }
-
-    add(marker) {
-        this.marker.root.add(this);
-    }
-
-    setScale(x, y, z) {
-        this.dae.scale.x = x;
-        this.dae.scale.y = y;
-        this.dae.scale.z = z;
-    }
-
-    setPosition(x, y, z) {
-        this.dae.position.x = x;
-        this.dae.position.y = y;
-        this.dae.position.z = z;
-    }
-
-    setRotation(x, y, z) {
-        this.dae.rotation.x = x;
-        this.dae.rotation.y = y;
-        this.dae.rotation.z = z;
-    }
-
-
-}
+//
+//var biomeLoader = new THREE.ColladaLoader();
+//biomeLoader.options.convertUpAxis = true;
+//biomeLoader.load('models/biome.dae', function (collada) {
+//    dae = collada.scene;
+//    dae.scale.x = dae.scale.y = dae.scale.z = 0.25;
+//    dae.rotation.x = 135 * Math.PI / 180;
+//    dae.position.y = 2;
+//    dae.updateMatrix();
+//    markerAA.root.add(dae);
+//});
+//
+//class MarkerModel {
+//    constructor() {
+//        this.loader = new THREE.ColladaLoader();
+//    }
+//
+//    load(src) {
+//        this.loader.load(src, function (collada) {
+//            this.dae = collada.scene;
+//            this.setScale(1, 1, 1);
+//            this.setPosition(1, 1, 1);
+//            this.setRotation(1, 1, 1);
+//            this.updateMatrix();
+//        })
+//    }
+//
+//    add(marker) {
+//        this.marker.root.add(this);
+//    }
+//
+//    setScale(x, y, z) {
+//        this.dae.scale.x = x;
+//        this.dae.scale.y = y;
+//        this.dae.scale.z = z;
+//    }
+//
+//    setPosition(x, y, z) {
+//        this.dae.position.x = x;
+//        this.dae.position.y = y;
+//        this.dae.position.z = z;
+//    }
+//
+//    setRotation(x, y, z) {
+//        this.dae.rotation.x = x;
+//        this.dae.rotation.y = y;
+//        this.dae.rotation.z = z;
+//    }
+//
+//
+//}

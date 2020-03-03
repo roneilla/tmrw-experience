@@ -9,13 +9,13 @@
 
   // declare variables here
 
-//   var fullVideo = new MarkerVideo('../videos/FULL.mp4');
-  var imageTest = new MarkerImage('img/club62.png');
-  imageTest.setSize(2, 1, 1);
-  imageTest.setPosition(0, 0, 0);
+  //   var fullVideo = new MarkerVideo('../videos/FULL.mp4');
+  var imageTest1 = new MarkerImage('img/over-ar-01.png');
+  imageTest1.setSize(2, 1, 1);
+  imageTest1.setPosition(0, 0, 0);
 
   //  fullVideo.setSize(1080, 1080);
   //  fullVideo.load();
 
   // marker variables
-  var marker1, marker2;
+  var marker1, marker2, marker3;

@@ -3,54 +3,120 @@
     font-family: sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
 .container {
     width: 375px;
-    background-color: #fafafa;
+    background-color: #fff;
     margin: 0 auto;
+    overflow: scroll;
+    height: 812px;
 }
 
 .headline {
-    height: 50px;
-    padding: 20px 10px 10px 10px;
-    background-color: #eee;
+    position: fixed;
+    width: 375px;
+    height: 80px;
+    padding: 10px;
+    background-color: #F0F0F0;
+    border-bottom: #D9D9D9 1px solid;
 }
 
 .back-button {
     width: 25%;
     float: left;
+     margin: 20px 0;
 }
+
+.contact-photo {
+    width: 40px;
+    height:40px;
+    background-color: #000;
+    border-radius: 100px;
+    margin: 5px auto;
+}
+
 
 .contact-info {
-    width: 75%;
+    width: 50%;
     text-align: center;
     float: left;
+    font-size: 10px;
 }
 
+.info-button {
+    width: 25%;
+    float: left;
+    text-align: right;
+    margin: 20px 0;
+    padding-right: 10px;
+}
+
+
 .conversation-wrapper {
-        padding: 0 5px;
+    margin: 80px auto;
+    width: 375px;
+    padding: 0 10px;
 }
 
 .jordan {
-    background-color: #eaeaea;
-    margin-right: 20%;
+    background-color: #E6E5EC;
+    float: left;
     color: #333;
 }
 
 .nicole {
-    background-color: #948df0;
-    margin-left: 20%;
+    background-color: #3FAEFA;
+    float: right;
     color: white;
+}
+
+
+p {
+    display: inline-block;
+    padding: 10px 15px;
+    max-width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 25px;
 
 }
 
 
-.text-block {
-    display: block;
+.block {
+    width: 100%;
+    float: left;
+}
+
+.text-menu {
+    position: fixed;
+    background-color: #eee;
+    width: 375px;
+    height: 70px;
+    float: left;
+    top: 742px;
     padding: 10px;
-    max-width: 80%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-radius: 2px;
-    font-size: 15px;
-    line-height: 20px;
+}
+
+.text-input {
+    height: 40px;
+    width: 75%;
+    border-radius: 100px;
+    background-color: #fafafa;
+    border: 1px #ccc solid;
+    float: left;
+
+}
+
+.send-button {
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 30px;
 }
