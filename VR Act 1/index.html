@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Andrew's Apartment</title>
+
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: fixed;
+            z-index: 1001;
+            bottom: 0;
+            left: 0;
+            width: 50vw;
+            height: 100px;
+            margin: 0 25vw 50px 25vw;
+            border-radius: 15px;
+            background-color: #ccc;
+            padding: 10px 50px;
+            border: solid 2px #333;
+        }
+
+        #message-box {
+            color: #111;
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="message-box">Welcome blah blah blah</div>
+    </div>
+    <a-scene>
+        <a-camera position="0 1 0">
+            <a-cursor cursor="fuse: true" raycaster="objects: .clickable" position="0 0 -0.1"
+                geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.06" material="color: #cccccc; shader:flat">
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="" to="1 1 1"
+                    dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1"
+                    to="0.2 0.2 0.2" dur="1500"></a-animation>
+            </a-cursor>
+        </a-camera>
+
+        <a-assets>
+            <a-asset-item id="apartment" src="models/apartment.dae"></a-asset-item>
+            <a-asset-item id="clue1" src="models/wristbands.dae"></a-asset-item>
+            <a-asset-item id="clue2" src="models/glasses.dae"></a-asset-item>
+            <a-asset-item id="clue3" src="models/pills.dae"></a-asset-item>
+        </a-assets>
+
+        <a-sky color="#87cefa"></a-sky>
+
+        <a-collada-model src="#apartment" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+
+        <a-collada-model class="clickable" id="c1" src="#clue1" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+        <a-collada-model class="clickable" id="c2" src="#clue2" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+        <a-collada-model class="clickable" id="c3" src="#clue3" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+
+
+    </a-scene>
+
+    <script>
+        var wristbands = document.querySelector("#c1");
+        var glasses = document.querySelector("#c2");
+        var pills = document.querySelector("#c3");
+
+        wristbands.addEventListener("click",
+            function () {
+                panel1.classList.remove("hide");
+                panel1.classList.add("show");
+            });
+
+        glasses.addEventListener("click",
+            function () {
+                panel2.classList.remove("hide");
+                panel2.classList.add("show");
+            });
+
+        pills.addEventListener("click",
+            function () {
+                panel3.classList.remove("hide");
+                panel3.classList.add("show");
+            });
+    </script>
+
+</body>
+
+</html>
