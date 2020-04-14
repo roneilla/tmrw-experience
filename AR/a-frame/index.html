@@ -1,0 +1,36 @@
+<script>
+    var custompatternratio = 0.8;
+
+</script>
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js">
+</script>
+<!--<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>-->
+
+<!--edited aframe code to have custom pattern ratio-->
+<script src="aframe-ar.js"></script>
+<script src="interaction.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs accepts-clicks>
+        <a-assets>
+            <a-asset-item id="model" src="model.dae"></a-asset-item>
+        </a-assets>
+        <a-entity collada-model="#model" scale="1 1 1" position="0 0 0">
+            <a-animation begin="move" easing="ease-in" attribute="position" from="" to="0 1 0" fill="forwards" dur="200"></a-animation>
+        </a-entity>
+        <a-marker-camera preset="custom" type="pattern" url="pattern/pattern-club62-logo-02.patt">
+        </a-marker-camera>
+        <a-entity camera></a-entity>
+    </a-scene>
+
+    <script>
+        function modelClick() {
+            var model = document.querySelector("#model");
+            model.addEventListener('click', function() {
+                model.emit('move');
+                console.log("hi");
+            });
+        }
+
+    </script>
+</body>

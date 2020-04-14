@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+#container {
+  position: fixed;
+  z-index: 1001;
+  bottom: 0;
+  left: 0;
+  width: 50vw;
+  margin: 0 25vw 50px 25vw;
+  border-radius: 15px;
+  background-color: #fafafa;
+  padding: 20px 50px;
+  border: 0px;
+  box-shadow: 0px 0px 4px rgba(66, 66, 66, 0.5);
+  line-height: 1.5rem;
+  max-width: 750px;
+  display: none;
+}
+
+#message-box {
+  color: #222;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+}
+
+#landing-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  color: #fff;
+  padding: 50px 25vw;
+  text-align: center;
+}
+
+.header {
+  font-size: 2rem;
+}
+
+.main {
+  margin: 200px 0;
+  font-size: 1.5rem;
+}
+
+.logo {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  color: #fff;
+  width: 150px;
+  text-align: left;
+}
+
+.land-button {
+  padding: 20px;
+  color: black;
+  background-color: white;
+  margin: 20px auto;
+  width: 200px;
+}
+
+.land-button:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.img-logo {
+  width: 150px;
+  object-fit: contain;
+}
+
+#preload {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  padding: 45vh 25vw;
+}
+
+#preload-message {
+  color: black;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+#preload-button {
+  color: #fff;
+  text-decoration: underline;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+#finalscreen {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100001;
+  padding: 45vw 25vw;
+  text-align: center;
+  display: none;
+}
+
+#finalscreen a {
+  color: black;
+  padding: 25px 50px;
+  background-color: white;
+}

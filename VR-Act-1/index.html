@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>VR Act 1</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="preload">
+        You wake up after going out the night before and can't remember anything.
+        <br>
+        <br>
+        Something's wrong.
+    </div>
+    <div id="container">
+        <div id="message-box">You wake up with a pounding headache. You realize you probably went out last night and had
+            a little too much to drink. You don't remember where you were, so you decided to look around your apartment
+            for clues.
+            <br>
+            <br>
+            <span style="font-style: italic;">Hint: Hover over objects to find clues</span>
+        </div>
+    </div>
+    <div id="message-gus">
+        <div class="wristband-title">Incoming Text from Gus</div>
+        <div class="texts-wrapper">
+            <div class="time-block">Today 11:55 AM</div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Hey! Sorry I left without saying goodbye this morning, I had a shift
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">Wait you were here this morning? I blacked out last night and have been trying
+                    to piece things together 😭</div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Lmao lowkey same. I really wanted to cancel work but no one could cover
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    Omg, I can't even remember most of it. I was hoping you could fill in some blanks for me. I'm
+                    looking for my friend, have you seen her? I think we were all hanging out last night
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Your friend went hard
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Last time I saw her, I think she went out for a smoke when the concert started
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    That's all that I can remember
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Then we went back to yours to crash lol
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    Holy shit ok. I got some really weird messages from her and she isn't answering, so I'm worried
+                    something might've happened to her
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Maybe she hooked up w someone too, I'm sure she'll turn up
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    I hope so...
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    What club were we at last night? </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    We all met at Crews, but it was really lame so we moved to <a
+                        href="https://ixd0011.firebird.sheridanc.on.ca/Club62/">Club 62</a>
+                </div>
+            </div>
+        </div>
+        <div class="button" id="gus-close-button">Close</div>
+    </div>
+    <div id="wristbands-message">
+        <div class="wristband-title">Incoming Text from 647-555-0192</div>
+        <div class="texts-wrapper">
+            <div class="text-block">
+                <div class="hana-text">
+                    Hi, is this Andrew?
+                </div>
+            </div>
+            <div class="text-block">
+
+                <div class="andrew-text">Yes, who is this?</div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    I'm Hana, Nicole's mom. Have you seen her? She's didn't come home last night.
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    Hey no, but I think she was here earlier with me. I don't know where she is now. She's probably on
+                    her
+                    way
+                    home I'm guessing.
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    What do you mean, "I think"?
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    Her wristband is here from the club we were at. I think she left before I woke up.
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Hmm, ok. Thanks for letting me know, I was worried.
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    No problem.
+                </div>
+            </div>
+        </div>
+        <div class="button" id="wr-close-button">Close</div>
+    </div>
+    <div id="m2-message">
+        <div class="wristband-title">Missed Texts from Nicole</div>
+        <div class="texts-wrapper">
+            <div class="time-block">Yesterday 10:32 PM</div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Eliza and I are going to get more drinks
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">Ok just met to the hottest guy lol, be there in a bit</div>
+            </div>
+            <div class="time-block">Today 1:25 AM</div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Please pick up
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    Where are you???
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    I feel like I'm dying
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="hana-text">
+                    She's still alive.
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    What you talking about?
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="andrew-text">
+                    Who's Alive?
+                </div>
+            </div>
+            <div class="read-block">Read 2:01 AM</div>
+            <div class="text-block">
+                <div class="not-delivered andrew-text">
+                    Where are you???
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="not-delivered andrew-text">
+                    HELLO
+                </div>
+            </div>
+            <div class="text-block">
+                <div class="not-delivered andrew-text">
+                    NICOLE
+                </div>
+            </div>
+            <div class="not-block">Not Delivered</div>
+
+        </div>
+        <div class="button" id="m2-close-button">Close</div>
+    </div>
+    <a-scene light="defaultLightsEnabled: false">
+        <a-camera position="-2 1.5 -6.5">
+            <a-cursor cursor=" fuse: true" raycaster="objects: .clickable" position="0 0 0"
+                geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.06" material="color: #cccccc; shader:flat">
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="" to="1 1 1"
+                    dur="150">
+                </a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1"
+                    to="0.2 0.2 0.2" dur="1500"></a-animation>
+            </a-cursor>
+        </a-camera>
+
+        <a-assets>
+            <a-asset-item id="apartment" src="models/apartment.dae"></a-asset-item>
+            <a-asset-item id="clue1" src="models/wristbands.dae"></a-asset-item>
+            <a-asset-item id="clue2" src="models/glasses.dae"></a-asset-item>
+            <a-asset-item id="clue3" src="models/pills.dae"></a-asset-item>
+            <a-asset-item id="painting1" src="models/painting1.dae"></a-asset-item>
+            <a-asset-item id="painting2" src="models/painting2.dae"></a-asset-item>
+        </a-assets>
+        <a-entity light="type: ambient; color: #bbb"></a-entity>
+        <a-entity light="color:#ac723e;intensity:0.3;shadowCameraVisible:false" position="2.70777 2.62455 -5.44273"
+            rotation="90 0 -0.2"></a-entity>
+        <a-sky color="#9FE4F4"></a-sky>
+
+        <a-collada-model src="#apartment" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+
+        <a-collada-model class="clickable" id="c1" src="#clue1" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+        <a-collada-model class="clickable" id="c2" src="#clue2" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+        <a-collada-model class="clickable" id="c3" src="#clue3" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+
+        <a-collada-model id="p1" src="#painting1" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+        <a-collada-model id="p2" src="#painting2" position="1 0 -5" rotation="0 90 0"></a-collada-model>
+
+
+    </a-scene>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

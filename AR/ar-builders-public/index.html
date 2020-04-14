@@ -1,0 +1,61 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="style.css">
+    </head>
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  <script src="js/models.js"></script>
+  <script src="js/userState.js"></script>
+  <script src="js/interaction.js"></script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <div class='speech-bubble'></div>
+    <a-scene embedded arjs cursor="rayOrigin: mouse" accepts-clicks>
+      <a-assets>
+        <a-asset-item id="pyra-obj" src="builder-models/Pyra.obj"></a-asset-item>
+        <a-asset-item id="biggie-obj" src="builder-models/Biggie.obj"></a-asset-item>
+        <a-asset-item id="frenchie-obj" src="builder-models/Frenchie.obj"></a-asset-item>
+        <a-asset-item id="toob-obj" src="builder-models/Toob.obj"></a-asset-item>
+        <a-asset-item id="lil-obj" src="builder-models/Lil.obj"></a-asset-item>
+        <a-asset-item id="hammer-obj" src="builder-models/Hammer.obj"></a-asset-item>
+        <a-asset-item id="screwdriver-obj" src="builder-models/Screwdriver.obj"></a-asset-item>
+        <a-asset-item id="hat-obj" src="builder-models/BuilderHat.obj"></a-asset-item>
+        <a-asset-item id="blocks-obj" src="builder-models/BuildingBlocks.obj"></a-asset-item>
+        <a-asset-item id="wrench-obj" src="builder-models/Wrench.obj"></a-asset-item>
+      </a-assets>
+      <a-marker id="pyra-marker" type="pattern" url="builder-markers/pyra.patt">
+        <a-entity id="pyra" obj-model="obj: #pyra-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="biggie-marker" type="pattern" url="builder-markers/biggie.patt">
+        <a-entity id="biggie" obj-model="obj: #biggie-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="frenchie-marker" type="pattern" url="builder-markers/frenchie.patt">
+        <a-entity id="frenchie" obj-model="obj: #frenchie-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="toob-marker" type="pattern" url="builder-markers/toob.patt">
+        <a-entity id="toob" obj-model="obj: #toob-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="lil-marker" type="pattern" url="builder-markers/lil.patt">
+        <a-entity id="lil" obj-model="obj: #lil-obj;" material="color: green" rotation="0 180 0" position="0 0 0.5" scale="0.15 0.15 0.15"></a-entity>
+      </a-marker>
+      <a-marker id="hammer-marker" type="pattern" url="builder-markers/hammer.patt">
+        <a-entity id="hammer" obj-model="obj: #hammer-obj;" material="color: green" rotation="90 -45 0" position="0 0 0" scale="1 1 1"></a-entity>
+      </a-marker>
+      <a-marker id="screwdriver-marker" type="pattern" url="builder-markers/screwdriver.patt">
+        <a-entity id="screwdriver" obj-model="obj: #screwdriver-obj;" material="color: green" rotation="0 45 0" position="0 0 0" scale="1 1 1"></a-entity>
+      </a-marker>
+      <a-marker id="blocks-marker" type="pattern" url="builder-markers/blocks.patt">
+        <a-entity id="blocks" obj-model="obj: #blocks-obj;" material="color: green" rotation="90 -45 45" position="0 0 0" scale="1 1 1"></a-entity>
+      </a-marker>
+      <a-marker id="hat-marker" type="pattern" url="builder-markers/hat.patt">
+        <a-entity id="hat" obj-model="obj: #hat-obj;" material="color: green" rotation="180 0 0" position="0 0 0" scale="1 1 1"></a-entity>
+      </a-marker>
+      <a-marker id="wrench-marker" type="pattern" url="builder-markers/wrench.patt">
+        <a-entity id="wrench" obj-model="obj: #wrench-obj;" material="color: green" rotation="90 -45 0" position="0 0 0" scale="1 1 1"></a-entity>
+      </a-marker>
+      <a-marker id="demo-marker" type="pattern" url="builder-markers/demo.patt">
+        <a-box id="demo" position="0 0.5 0" scale="0.5 0.5 0.5" material='color: green;'></a-box>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VR Act 2</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="landing-page">
+        <div class="header">
+            <div class="land-title">TMRW</div>
+            <div class="land-subtitle">Storygame Experience</div>
+        </div>
+
+        <div class="main">
+            <div class="heading-1">Part 002</div>
+            <div class="heading-2">The Journey Home</div>
+            <div id="land-button" class="land-button">Start</div>
+        </div>
+
+        <div class="logo">
+            Made by
+            <img src="img/ennoia_logo.svg" alt="" class="img-logo">
+        </div>
+    </div>
+    <div id="preload">
+        <div id="preload-message"></div>
+        <div id="preload-button">Next</div>
+    </div>
+    <div id="container">
+        <div id="message-box"><span style="font-style: italic; color: #888;">Hint: Hover over objects to interact</span>
+        </div>
+    </div>
+    <div id="finalscreen">
+        The End.
+    </div>
+    <!-- A Frame Stuff-->
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="model" src="models/model.dae">
+            </a-asset-item>
+            <a-asset-item id="calendar-model" src="models/Calendar.dae">
+            </a-asset-item>
+            <a-asset-item id="poster-model" src="models/MarciePoster.dae">
+            </a-asset-item>
+            <a-asset-item id="paintjar-model" src="models/PaintJar.dae">
+            </a-asset-item>
+            <a-asset-item id="italycard-model" src="models/Postcard_Italy.dae">
+            </a-asset-item>
+            <a-asset-item id="spaincard-model" src="models/Postcard_Spain.dae">
+            </a-asset-item>
+            <a-asset-item id="vitamin-model" src="models/VitaminBottle.dae">
+            </a-asset-item>
+            <a-asset-item id="window-model" src="models/Window.dae">
+            </a-asset-item>
+        </a-assets>
+        <a-camera position="5 0 8">
+            <a-cursor cursor="fuse: true" raycaster="objects: .clickable" position="0 0 -0.1"
+                geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.06" material="color: #cccccc; shader:flat">
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="" to="1 1 1"
+                    dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1"
+                    to="0.2 0.2 0.2" dur="1500"></a-animation>
+            </a-cursor>
+        </a-camera>
+
+        <a-entity light="type: ambient; color: #aaa"></a-entity>
+        <a-entity light="color:#fff" position="2.18588 2.78343 -4.73968" rotation="0 45 0"></a-entity>
+        <a-collada-model class="clickable" id="calendar" src="#calendar-model" position="0 -3.5 0" scale="15 15 15">
+        </a-collada-model>
+        <a-collada-model class="clickable" id="marcie-poster" src="#poster-model" position="0 -3.5 0" scale="15 15 15">
+        </a-collada-model>
+        <a-collada-model class="clickable" id="paint-jar" src="#paintjar-model" position="0 -3.5 0" scale="15 15 15">
+        </a-collada-model>
+        <a-collada-model class="clickable" id="italy-card" src="#italycard-model" position="0 -3.5 0" scale="15 15 15">
+        </a-collada-model>
+        <a-collada-model class="clickable" id="spain-card" src="#spaincard-model" position="0 -3.5 0" scale="15 15 15">
+        </a-collada-model>
+        <a-collada-model class="clickable" id="vitamin-bottle" src="#vitamin-model" position="0 -3.5 0"
+            scale="15 15 15">
+        </a-collada-model>
+        <a-collada-model id="window" src="#window-model" position="0 -3.5 0" scale="15 15 15"></a-collada-model>
+        <a-collada-model id="model" src="#model" scale="15 15 15" position="0 -3.5 0">
+        </a-collada-model>
+        <a-sky color="#65d4f6"></a-sky>
+    </a-scene>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

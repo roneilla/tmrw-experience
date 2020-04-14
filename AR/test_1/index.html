@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+
+<script>
+    // change pattern ratio here 
+    var patternRatio = 0.8;
+
+</script>
+
+<!-- include three.js library -->
+<script src='vendor/js/three.js'></script>
+<script src='vendor/js/ColladaLoader.js'></script>
+<script src='vendor/js/tracking.js'></script>
+<script src='vendor/js/tween.min.js'></script>
+
+<!-- include jsartookit -->
+<script src="vendor/jsartoolkit5/artoolkit.min.js"></script>
+<script src="vendor/jsartoolkit5/artoolkit.api.js"></script>
+
+<!-- include threex.artoolkit -->
+<script src="vendor/threex/threex-artoolkitsource.js"></script>
+<script src="vendor/threex/threex-artoolkitcontext.js"></script>
+<script src="vendor/threex/threex-arbasecontrols.js"></script>
+<script src="vendor/threex/threex-armarkercontrols.js"></script>
+
+<script>
+    THREEx.ArToolkitContext.baseURL = '/'
+
+</script>
+
+<body>
+   
+    <!-- components library !!! DO NOT CHANGE ANYTHING IN THIS FILE !!! -->
+    <script src="lib/components.js"></script>
+
+    <!-- declare your global variables in this script file -->
+    <script src="lib/global.js"></script>
+
+    <!-- video player functions -->
+    <script src="lib/playVideo.js"></script>
+
+    <!-- initialize -->
+    <script src="lib/initialize.js"></script>
+
+    <!-- add script in here -->
+    <script src="lib/main.js"></script>
+
+    <!-- add animations in this script file -->
+    <script src="lib/animate.js"></script>
+
+    <script>
+        init();
+    </script>
+
+</body>

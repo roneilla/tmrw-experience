@@ -1,122 +1,116 @@
 * {
-    box-sizing: border-box;
-    font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
 .container {
-    width: 375px;
-    background-color: #fff;
-    margin: 0 auto;
-    overflow: scroll;
-    height: 812px;
+  width: 375px;
+  background-color: #fff;
+  margin: 0 auto;
+  overflow: scroll;
+  height: 100vh;
+  max-height: 812px;
 }
 
 .headline {
-    position: fixed;
-    width: 375px;
-    height: 80px;
-    padding: 10px;
-    background-color: #F0F0F0;
-    border-bottom: #D9D9D9 1px solid;
+  position: fixed;
+  width: 375px;
+  height: 80px;
+  padding: 5px 10px 20px 10px;
+  background-color: #f0f0f0;
+  border-bottom: #d9d9d9 1px solid;
 }
 
 .back-button {
-    width: 25%;
-    float: left;
-     margin: 20px 0;
+  width: 25%;
+  float: left;
+  margin: 20px 0;
 }
 
 .contact-photo {
-    width: 40px;
-    height:40px;
-    background-color: #000;
-    border-radius: 100px;
-    margin: 5px auto;
+  width: 40px;
+  height: 40px;
+  background-color: #cd6565;
+  border-radius: 100px;
+  margin: 5px auto;
 }
 
-
 .contact-info {
-    width: 50%;
-    text-align: center;
-    float: left;
-    font-size: 10px;
+  width: 50%;
+  text-align: center;
+  float: left;
+  font-size: 10px;
 }
 
 .info-button {
-    width: 25%;
-    float: left;
-    text-align: right;
-    margin: 20px 0;
-    padding-right: 10px;
+  width: 25%;
+  float: left;
+  text-align: right;
+  margin: 20px 0;
+  padding-right: 10px;
 }
 
-
 .conversation-wrapper {
-    margin: 80px auto;
-    width: 375px;
-    padding: 0 10px;
+  margin: 80px auto;
+  width: 375px;
+  padding: 0 10px;
 }
 
 .jordan {
-    background-color: #E6E5EC;
-    float: left;
-    color: #333;
+  background-color: #e6e5ec;
+  float: left;
+  color: #333;
 }
 
 .nicole {
-    background-color: #3FAEFA;
-    float: right;
-    color: white;
+  background-color: #3faefa;
+  float: right;
+  color: white;
 }
-
 
 p {
-    display: inline-block;
-    padding: 10px 15px;
-    max-width: 80%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    font-size: 15px;
-    line-height: 25px;
-
+  display: inline-block;
+  padding: 10px 15px;
+  max-width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  line-height: 25px;
 }
 
-
 .block {
-    width: 100%;
-    float: left;
+  width: 100%;
+  float: left;
 }
 
 .text-menu {
-    position: fixed;
-    background-color: #eee;
-    width: 375px;
-    height: 70px;
-    float: left;
-    top: 742px;
-    padding: 10px;
+  position: fixed;
+  background-color: #eee;
+  width: 375px;
+  height: 70px;
+  float: left;
+  top: 742px;
+  padding: 10px;
 }
 
 .text-input {
-    height: 40px;
-    width: 75%;
-    border-radius: 100px;
-    background-color: #fafafa;
-    border: 1px #ccc solid;
-    float: left;
-
+  height: 40px;
+  width: 75%;
+  border-radius: 100px;
+  background-color: #fafafa;
+  border: 1px #ccc solid;
+  float: left;
 }
 
 .send-button {
-    width: 25%;
-    float: left;
-    text-align: center;
-    font-size: 30px;
+  width: 25%;
+  float: left;
+  text-align: center;
+  font-size: 30px;
 }
